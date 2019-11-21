@@ -8,12 +8,15 @@
   <link rel="dns-prefetch" href="tingze.github.io">
   <title>Blog搭建二三事 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="本沙雕搭建blog可谓是一波三折。起初被无良学长坑害分享一些hexo博客搭建的心得">
+<meta name="keywords" content="Blog">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Blog搭建二三事">
 <meta property="og:url" content="tingze.github.io&#x2F;2019&#x2F;11&#x2F;15&#x2F;Blog%E6%90%AD%E5%BB%BA%E4%BA%8C%E4%B8%89%E4%BA%8B&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="本沙雕搭建blog可谓是一波三折。起初被无良学长坑害分享一些hexo博客搭建的心得">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-15T08:25:34.063Z">
+<meta property="og:updated_time" content="2019-11-21T06:53:35.838Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -172,7 +175,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>本沙雕搭建blog可谓是一波三折。<del>起初被无良学长坑害</del><br>分享一些hexo博客搭建的心得</p>
+<a id="more"></a>
+<h1 id="事前准备"><a href="#事前准备" class="headerlink" title="事前准备"></a>事前准备</h1><p>搭建博客之前的准备工作</p>
+<h2 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h2><p>一台电脑</p>
+<h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><p>node.js<br>git<br>hexo</p>
+<h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><ol>
+<li>建立根目录<br>可以直接在目标位置新建文件夹重命名<br>也可以使用<code>mkdir</code>指令创建（个人推荐熟悉命令行操作）</li>
+<li>建立<br>安装好一系列组件后在刚刚创建的根目录下打开终端,使用<br><code>hexo init</code><br>指令进行初始化<br>使用<code>hexo s</code>启动，可以在4000端口<code>localhost:4000</code>进行本地浏览,即可看到初始界面</li>
+<li>常规操作<br><code>hexo clean</code>进行清空缓存操作<br><code>hexo g</code>进行生成</li>
+<li>推到远端<br>推到远端这里选取的借助Github<br>首先，拥有一个Github账号（什么!?竟然还没有）<br>新建仓库，以自己的Github名命名仓库<br>之前说过，要安装Git<br>右键打开Git终端<br>设置用户名和密码<br><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;yourEmailAddress&quot;</code><br>设置好后生成ssh密钥<br><code>ssh-keygen -t rsa -C &#39;youremail&#39;</code><br>不断回车<br>然后查看ssh<br><code>cat ~/.ssh/id_rsa.pub</code><br>将你看到的一坨字符复制<br>在github上进行相关ssh设置即可</li>
+</ol>
+<hr>
+<p>然后是本地的配置<br>打开本地的blog根目录，对_config.yml文件进行修改<br>拉到最下<br>看到<code>deploy</code><br>在下面添加<br><code>repo: &quot;你的GitHub仓库地址&quot;</code><br><code>branch: master</code></p>
+<hr>
+<p>终端切换到根目录位置<br><code>npm install hexo-deployer-git --save</code><br>安装一个插件<br>如果安装过慢或者失败，可以更换为淘宝npm镜面源<br><code>npm config set registry http://registry.npm.taobao.org/</code><br>然后再安装<br><code>cnpm install hexo-deployer-git --save</code></p>
+<hr>
+<p>一切准备就绪，启动终端，cd到博客根目录<br><code>hexo d</code>将博客推到远端<br>前往GitHub仓库可以发现多了一些东西<br>此时，再浏览器地址栏输入github仓库地址的后缀<br>即”yourname.github.io”<br>大功告成</p>
+<hr>
+<p>主题和一些配置问题，留到下期</p>
+
       
 
       
@@ -180,6 +202,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">Blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -274,6 +307,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#事前准备"><span class="toc-number">1.</span> <span class="toc-text">事前准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#硬件"><span class="toc-number">1.1.</span> <span class="toc-text">硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件"><span class="toc-number">1.2.</span> <span class="toc-text">软件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#流程"><span class="toc-number">2.</span> <span class="toc-text">流程</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -381,11 +427,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
