@@ -20,14 +20,18 @@
     var CONFIG = {"hostname":"tingze.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="tingze.github.io&#x2F;tags&#x2F;markdown&#x2F;index.html">
+  <meta name="description" content="关于C语言数据类型">
+<meta name="keywords" content="C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言基础">
+<meta property="og:url" content="tingze.github.io&#x2F;2020&#x2F;08&#x2F;31&#x2F;C%E8%AF%AD%E8%A8%80&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="关于C语言数据类型">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-08-31T15:48:43.850Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="tingze.github.io/tags/markdown/">
+<link rel="canonical" href="tingze.github.io/2020/08/31/C%E8%AF%AD%E8%A8%80/">
 
 
 <script id="page-configurations">
@@ -35,12 +39,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Tag: markdown | Hexo</title>
+  <title>C语言基础 | Hexo</title>
   
 
 
@@ -138,51 +142,104 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">markdown
-          <small>Tag</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="tingze.github.io/2020/08/31/C%E8%AF%AD%E8%A8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Shinobu2.jpg">
+      <meta itemprop="name" content="TingzE">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C语言基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-08-31 22:58:36 / Modified: 23:48:43" itemprop="dateCreated datePublished" datetime="2020-08-31T22:58:36+08:00">2020-08-31</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2019</span>
+        <p>关于C语言数据类型</p>
+<a id="more"></a>
+<h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><h3 id="1-整数"><a href="#1-整数" class="headerlink" title="1. 整数"></a>1. 整数</h3><p>向下取整<br><code>int cost=12.99;</code><br>cost的值为12</p>
+<h3 id="2-浮点数"><a href="#2-浮点数" class="headerlink" title="2. 浮点数"></a>2. 浮点数</h3><p><code>3.16E7</code>表示3.16<em>10^7<br>*两个很大的数相减，浮点数损失的精度更多</em></p>
+<p><code>%f</code> 打印十进制计数制的浮点数<br><code>%e</code> 打印指数计数法的浮点数</p>
+<h3 id="3-数制"><a href="#3-数制" class="headerlink" title="3. 数制"></a>3. 数制</h3><ul>
+<li><code>%d</code> 十进制</li>
+<li><code>%o</code> 八进制</li>
+<li><code>%x</code> 十六进制</li>
+</ul>
+<p><em>在前面加#显示前缀</em></p>
+<h3 id="4-char"><a href="#4-char" class="headerlink" title="4. char"></a>4. char</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char grade = &apos;FATE&apos;;(雾)</span><br></pre></td></tr></table></figure>
+<p>定义一个’FATE’字符常量，把4个独立的8位ASCII码储存在一个32位存储单元中。<br>只有最后8位有效，<code>grade</code>的值是<code>E</code>。</p>
+<h3 id="5-转义序列"><a href="#5-转义序列" class="headerlink" title="5. 转义序列"></a>5. 转义序列</h3><ul>
+<li><code>\a</code> 警报</li>
+<li><code>\b</code> 退格(通常不会擦除退回经过的字符)</li>
+<li><code>\f</code> 换页</li>
+<li><code>\r</code> 回车</li>
+<li><code>\\</code> 反斜杠</li>
+<li><code>\&#39;</code> 单引号</li>
+</ul>
+<h2 id="刷新输出"><a href="#刷新输出" class="headerlink" title="刷新输出"></a>刷新输出</h2><p>C标准明确了何时将缓冲区中的内容发送到屏幕</p>
+<blockquote>
+<p>当缓冲区满、遇到换行字符、需要输入时</p>
+</blockquote>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-11-14T14:12:48+08:00"
-              content="2019-11-14">
-          11-14
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"># C</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/11/14/First-Article/" itemprop="url">
-            <span itemprop="name">First Article</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/31/powershell/" rel="prev" title="powershell">
+      <i class="fa fa-chevron-left"></i> powershell
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
@@ -235,6 +292,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据"><span class="nav-number">1.</span> <span class="nav-text">数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-整数"><span class="nav-number">1.1.</span> <span class="nav-text">1. 整数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-浮点数"><span class="nav-number">1.2.</span> <span class="nav-text">2. 浮点数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-数制"><span class="nav-number">1.3.</span> <span class="nav-text">3. 数制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-char"><span class="nav-number">1.4.</span> <span class="nav-text">4. char</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-转义序列"><span class="nav-number">1.5.</span> <span class="nav-text">5. 转义序列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#刷新输出"><span class="nav-number">2.</span> <span class="nav-text">刷新输出</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
