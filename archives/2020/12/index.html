@@ -20,18 +20,14 @@
     var CONFIG = {"hostname":"tingze.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="本沙雕搭建blog可谓是一波三折。起初被无良学长坑害分享一些hexo博客搭建的心得">
-<meta name="keywords" content="Blog">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Blog搭建二三事">
-<meta property="og:url" content="tingze.github.io&#x2F;2019&#x2F;11&#x2F;15&#x2F;Blog%E6%90%AD%E5%BB%BA%E4%BA%8C%E4%B8%89%E4%BA%8B&#x2F;index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="tingze.github.io&#x2F;archives&#x2F;2020&#x2F;12&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="本沙雕搭建blog可谓是一波三折。起初被无良学长坑害分享一些hexo博客搭建的心得">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-21T06:53:35.838Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="tingze.github.io/2019/11/15/Blog%E6%90%AD%E5%BB%BA%E4%BA%8C%E4%B8%89%E4%BA%8B/">
+<link rel="canonical" href="tingze.github.io/archives/2020/12/">
 
 
 <script id="page-configurations">
@@ -39,12 +35,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'en'
   };
 </script>
 
-  <title>Blog搭建二三事 | Hexo</title>
+  <title>Archive | Hexo</title>
   
 
 
@@ -142,107 +138,50 @@
         <div class="content-wrap">
           
 
-          <div class="content post posts-expand">
+          <div class="content archive">
             
 
-    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="tingze.github.io/2019/11/15/Blog%E6%90%AD%E5%BB%BA%E4%BA%8C%E4%B8%89%E4%BA%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Shinobu2.jpg">
-      <meta itemprop="name" content="TingzE">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Blog搭建二三事
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-11-15 16:25:34" itemprop="dateCreated datePublished" datetime="2019-11-15T16:25:34+08:00">2019-11-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-21 14:53:35" itemprop="dateModified" datetime="2019-11-21T14:53:35+08:00">2019-11-21</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <span class="collection-header">Um..! 9 posts in total. Keep on posting.</span>
+      </div>
 
       
-        <p>本沙雕搭建blog可谓是一波三折。<del>起初被无良学长坑害</del><br>分享一些hexo博客搭建的心得</p>
-<a id="more"></a>
-<h1 id="事前准备"><a href="#事前准备" class="headerlink" title="事前准备"></a>事前准备</h1><p>搭建博客之前的准备工作</p>
-<h2 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h2><p>一台电脑</p>
-<h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><p>node.js<br>git<br>hexo</p>
-<h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><ol>
-<li>建立根目录<br>可以直接在目标位置新建文件夹重命名<br>也可以使用<code>mkdir</code>指令创建（个人推荐熟悉命令行操作）</li>
-<li>建立<br>安装好一系列组件后在刚刚创建的根目录下打开终端,使用<br><code>hexo init</code><br>指令进行初始化<br>使用<code>hexo s</code>启动，可以在4000端口<code>localhost:4000</code>进行本地浏览,即可看到初始界面</li>
-<li>常规操作<br><code>hexo clean</code>进行清空缓存操作<br><code>hexo g</code>进行生成</li>
-<li>推到远端<br>推到远端这里选取的借助Github<br>首先，拥有一个Github账号（什么!?竟然还没有）<br>新建仓库，以自己的Github名命名仓库<br>之前说过，要安装Git<br>右键打开Git终端<br>设置用户名和密码<br><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;yourEmailAddress&quot;</code><br>设置好后生成ssh密钥<br><code>ssh-keygen -t rsa -C &#39;youremail&#39;</code><br>不断回车<br>然后查看ssh<br><code>cat ~/.ssh/id_rsa.pub</code><br>将你看到的一坨字符复制<br>在github上进行相关ssh设置即可</li>
-</ol>
-<hr>
-<p>然后是本地的配置<br>打开本地的blog根目录，对_config.yml文件进行修改<br>拉到最下<br>看到<code>deploy</code><br>在下面添加<br><code>repo: &quot;你的GitHub仓库地址&quot;</code><br><code>branch: master</code></p>
-<hr>
-<p>终端切换到根目录位置<br><code>npm install hexo-deployer-git --save</code><br>安装一个插件<br>如果安装过慢或者失败，可以更换为淘宝npm镜面源<br><code>npm config set registry http://registry.npm.taobao.org/</code><br>然后再安装<br><code>cnpm install hexo-deployer-git --save</code></p>
-<hr>
-<p>一切准备就绪，启动终端，cd到博客根目录<br><code>hexo d</code>将博客推到远端<br>前往GitHub仓库可以发现多了一些东西<br>此时，再浏览器地址栏输入github仓库地址的后缀<br>即”yourname.github.io”<br>大功告成</p>
-<hr>
-<p>主题和一些配置问题，留到下期</p>
-
+    <div class="collection-year">
+      <span class="collection-header">2020</span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Blog/" rel="tag"># Blog</a>
-          </div>
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-12-26T15:33:27+08:00"
+              content="2020-12-26">
+          12-26
+        </time>
+      </div>
 
-        
+      <div class="post-title">
+          <a class="post-title-link" href="/2020/12/26/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/" itemprop="url">
+            <span itemprop="name">素数筛法</span>
+          </a>
+      </div>
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2019/11/14/First-Article/" rel="prev" title="First Article">
-      <i class="fa fa-chevron-left"></i> First Article
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/11/15/%E5%A4%A9%E6%B0%94%E4%B9%8B%E5%AD%90/" rel="next" title="天气之子">
-      天气之子 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+    </header>
   </article>
+
+
+    </div>
+  </div>
   
   
+  
+
   
 
 
@@ -295,7 +234,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#事前准备"><span class="nav-number">1.</span> <span class="nav-text">事前准备</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#硬件"><span class="nav-number">1.1.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件"><span class="nav-number">1.2.</span> <span class="nav-text">软件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流程"><span class="nav-number">2.</span> <span class="nav-text">流程</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
