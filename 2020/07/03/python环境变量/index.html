@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="微软商店好屑">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-07-03T08:02:32.161Z">
+<meta property="og:updated_time" content="2020-12-26T07:07:17.340Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="tingze.github.io/2020/07/03/python%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
@@ -116,9 +116,9 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-tags">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
   </ul>
@@ -171,10 +171,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-07-03 15:56:32 / Modified: 16:02:32" itemprop="dateCreated datePublished" datetime="2020-07-03T15:56:32+08:00">2020-07-03</time>
+              <time title="Created: 2020-07-03 15:56:32" itemprop="dateCreated datePublished" datetime="2020-07-03T15:56:32+08:00">2020-07-03</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-26 15:07:17" itemprop="dateModified" datetime="2020-12-26T15:07:17+08:00">2020-12-26</time>
+              </span>
 
           
 
@@ -192,6 +198,7 @@
 
 <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在cmd中输入python，环境变量已经设置，然而敲下回车，弹出的确实微软商店的python界面</p>
 <h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><p>打开环境变量页面<br>查看<code>path</code><br>发现一条<code>%USERPROFILE%\AppData\Local\Microsoft\WindowsApps</code>路径<br>没错，罪魁祸首就是它。直接删除（建议备份一下<br>重启cmd，再次运行python，完美解决</p>
+<h1 id="更新一下"><a href="#更新一下" class="headerlink" title="更新一下"></a>更新一下</h1><p>在一位学长的建议下，不要乱删路径。<br>在<code>path</code>中的上下位置决定了<strong>优先级</strong>，将上述路径移至<code>python</code>路径下方<br>然后<strong>重启电脑</strong>即可</p>
 
     </div>
 
@@ -275,7 +282,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题解决"><span class="nav-number">2.</span> <span class="nav-text">问题解决</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题解决"><span class="nav-number">2.</span> <span class="nav-text">问题解决</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新一下"><span class="nav-number">3.</span> <span class="nav-text">更新一下</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -289,8 +296,7 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+          <a href="/archives">
           <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
@@ -301,6 +307,14 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/TingzE" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;TingzE" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/tingzexu33@gmail.com" title="E-Mail → tingzexu33@gmail.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -322,7 +336,7 @@
 
 <div class="copyright">
   
-  &copy; 
+  &copy; 2019 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
