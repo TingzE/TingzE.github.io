@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="快速排序">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-03-09T08:44:32.140Z">
+<meta property="og:updated_time" content="2021-03-09T09:05:21.577Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="tingze.github.io/2021/02/12/quickSort/">
@@ -178,7 +178,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-09 16:44:32" itemprop="dateModified" datetime="2021-03-09T16:44:32+08:00">2021-03-09</time>
+                <time title="Modified: 2021-03-09 17:05:21" itemprop="dateModified" datetime="2021-03-09T17:05:21+08:00">2021-03-09</time>
               </span>
 
           
@@ -198,10 +198,153 @@
 <h1 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h1><p>首先在数据中选取一个基准值<code>temp</code></p>
 <p>然后从末尾向前寻找比<code>temp</code>小的数，放到<code>temp</code>前<br>从开头向后寻找比<code>temp</code>大的数，放到<code>temp</code>后</p>
 <p>递归，对基准值两边继续进行上述操作，直到各区间只有一个数</p>
-<h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><p>以一个数组为例子<br>| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |<br>|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|<br>| 48| 85 | 57| 42| 60| 72| 83| 73| 88| 6 |</p>
-<p>初始时i=0, j=9, temp = array[i] = 48<br>现在相当于将array[0]提取出来，存放到<code>temp</code>中<br>从后向前找到比<code>temp</code>小的数为j=9,array[9]=6，将array[9]填补到array[0]中<code>array[0]=array[9];i++</code>,这样array[9]就空了出来<br>数组为<br>| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |<br>|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|<br>| 6 | 85 | 57| 42| 60| 72| 83| 73| 88| 6 |<br>从前向后寻找比<code>temp</code>大的数，j=1，array[1]=85，将array[1]存放到刚刚空出来array[9]的位置<code>array[9]=array[1];j--</code>，此时array[1]相当于空了出来<br>数组为<br>| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |<br>|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|<br>| 6 | 85 | 57| 42| 60| 72| 83| 73| 88| 85 |<br>此时，i=1,j=8</p>
-<p>重复上述步骤<br>继续从后面向前寻找比<code>temp</code>小的数，发现j=3，array[3]=42，将其填入array[1]，<code>array[1]=array[3];i++</code><br>从前向后寻找，i=2，array[2]比<code>temp</code>大，<code>array[3]=array[2];j--</code><br>数组为<br>| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |<br>|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|<br>| 6 | 42 | 57| 57 | 60| 72| 83| 73| 88| 85 |<br>此时，i==j=2，退出，将<code>temp</code>填入刚刚空出来的array[2]</p>
-<p>数组变为<br>| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |<br>|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|<br>| 6 | 42 | 48 | 57 | 60| 72| 83| 73| 88| 85 |</p>
+<h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><p>以一个数组为例子</p>
+<table>
+<thead>
+<tr>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">48</td>
+<td align="center">85</td>
+<td align="center">57</td>
+<td align="center">42</td>
+<td align="center">60</td>
+<td align="center">72</td>
+<td align="center">83</td>
+<td align="center">73</td>
+<td align="center">88</td>
+<td align="center">6</td>
+</tr>
+</tbody></table>
+<p>初始时i=0, j=9, temp = array[i] = 48<br>现在相当于将array[0]提取出来，存放到<code>temp</code>中<br>从后向前找到比<code>temp</code>小的数为j=9,array[9]=6，将array[9]填补到array[0]中<code>array[0]=array[9];i++</code>,这样array[9]就空了出来<br>数组为</p>
+<table>
+<thead>
+<tr>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">6</td>
+<td align="center">85</td>
+<td align="center">57</td>
+<td align="center">42</td>
+<td align="center">60</td>
+<td align="center">72</td>
+<td align="center">83</td>
+<td align="center">73</td>
+<td align="center">88</td>
+<td align="center">6</td>
+</tr>
+</tbody></table>
+<p>从前向后寻找比<code>temp</code>大的数，j=1，array[1]=85，将array[1]存放到刚刚空出来array[9]的位置<code>array[9]=array[1];j--</code>，此时array[1]相当于空了出来<br>数组为</p>
+<table>
+<thead>
+<tr>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">6</td>
+<td align="center">85</td>
+<td align="center">57</td>
+<td align="center">42</td>
+<td align="center">60</td>
+<td align="center">72</td>
+<td align="center">83</td>
+<td align="center">73</td>
+<td align="center">88</td>
+<td align="center">85</td>
+</tr>
+</tbody></table>
+<p>此时，i=1,j=8</p>
+<p>重复上述步骤<br>继续从后面向前寻找比<code>temp</code>小的数，发现j=3，array[3]=42，将其填入array[1]，<code>array[1]=array[3];i++</code><br>从前向后寻找，i=2，array[2]比<code>temp</code>大，<code>array[3]=array[2];j--</code><br>数组为</p>
+<table>
+<thead>
+<tr>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">6</td>
+<td align="center">42</td>
+<td align="center">57</td>
+<td align="center">57</td>
+<td align="center">60</td>
+<td align="center">72</td>
+<td align="center">83</td>
+<td align="center">73</td>
+<td align="center">88</td>
+<td align="center">85</td>
+</tr>
+</tbody></table>
+<p>此时，i==j=2，退出，将<code>temp</code>填入刚刚空出来的array[2]</p>
+<p>数组变为</p>
+<table>
+<thead>
+<tr>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">6</td>
+<td align="center">42</td>
+<td align="center">48</td>
+<td align="center">57</td>
+<td align="center">60</td>
+<td align="center">72</td>
+<td align="center">83</td>
+<td align="center">73</td>
+<td align="center">88</td>
+<td align="center">85</td>
+</tr>
+</tbody></table>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
 <li>i=L,j=R,temp=array[i]</li>
 <li>j–从后向前寻找比temp小的数，填入array[i]</li>
